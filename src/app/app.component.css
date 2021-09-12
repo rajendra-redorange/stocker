@@ -1,0 +1,14 @@
+.stock-head {
+  padding: 5px;
+  font-weight: bold;
+  height: 6.25rem;
+}
+
+.stock-content {
+  padding: 5px;
+  font-size: 1rem;
+}
+
+.stock-content-row {
+  height: 13.75rem;
+}

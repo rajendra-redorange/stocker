@@ -1,0 +1,64 @@
+<div fxLayout="column">
+  <form
+    fxLayout="column"
+    (ngSubmit)="addStockForm(stockForm)"
+    [formGroup]="stockForm"
+    fxLayoutGap="1rem"
+  >
+    <section fxLayout="column" fxLayoutGap="1.5rem">
+      <mat-form-field
+        appearance="outline"
+        fxLayout="column"
+        class="mat-input-wrapper form-field"
+      >
+        <mat-label>Stock Name</mat-label>
+        <input type="text" matInput name="stock" [formControl]="stock" />
+        <mat-error
+          *ngIf="stock.invalid && stock.touched && stock.hasError('required')"
+        >
+          This field is mandatory</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field
+        appearance="outline"
+        fxLayout="column"
+        class="mat-input-wrapper form-field"
+      >
+        <mat-label>Value</mat-label>
+        <input type="number"  min="0" matInput name="value" [formControl]="value" />
+        <mat-error
+          *ngIf="value.invalid && value.touched && value.hasError('required')"
+        >
+          This field is mandatory</mat-error
+        >
+      </mat-form-field>
+    </section>
+    <section align="end">
+      <div
+        fxLayout="row"
+        fxLayoutGap="0.5rem"
+        fxLayoutAlign="end"
+        fxLayout.xs="column"
+      >
+        <button
+          mat-flat-button
+          name="cancel"
+          type="button"
+          (click)="hideForm()"
+        >
+          Cancel
+        </button>
+        <button
+          name="trigger-update"
+          [disabled]="!stockForm.dirty || stockForm.invalid"
+          mat-raised-button
+          color="accent"
+          type="submit"
+        >
+          Add
+        </button>
+      </div>
+    </section>
+  </form>
+</div>

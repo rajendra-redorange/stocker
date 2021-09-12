@@ -1,0 +1,15 @@
+.alert-box {
+    color: white;
+    .alert-icon {
+        font-size: 2rem;
+        height: 2rem;
+        width: 2rem;
+        margin-top: -2px;
+    }
+    .close {
+        font-size: 1rem;
+        cursor: pointer;
+        height: 1rem;
+        width: 1rem;
+    }
+}

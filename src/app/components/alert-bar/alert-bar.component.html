@@ -1,0 +1,13 @@
+<div class="alert-box" fxLayout="row">
+    <div fxLayout="row" fxLayoutGap="1rem" fxFlex="11.5 11.5 calc(11.5*100%/12 - 1rem)">
+        <mat-icon class="alert-icon">{{alertIconType}}</mat-icon>
+        <div fxLayout="column">
+            <p><b>{{alertBarHeading}}</b></p>
+            <p>{{data.message}}</p>
+        </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center" fxFlex="0.5 0.5 calc(0.5*100%/12)">
+        <mat-icon class="close" (click)="closeSnackbar()">close
+        </mat-icon>
+    </div>
+</div>

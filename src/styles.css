@@ -1,1 +1,77 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.error-snackbar {
+  background: #f9451b;
+}
+
+.success-snackbar {
+  background: #42d787;
+}
+
+.info-snackbar {
+  background: #0086d6;
+}
+
+.warn-snackbar {
+  background: #ffbb00;
+}
+
+@media (max-width: 960px) {
+  .mat-snack-bar-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .mat-snack-bar-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .cdk-overlay-pane {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .cdk-overlay-pane {
+    place-content: center;
+    justify-content: center;
+  }
+
+  mat-dialog-container {
+    max-width: 80vw;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1599px) {
+  .mat-snack-bar-container {
+    max-width: 500px !important;
+    min-width: 450px !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .mat-snack-bar-container {
+    max-width: 500px !important;
+    width: 500px !important;
+  }
+}
